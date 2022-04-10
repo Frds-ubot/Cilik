@@ -81,15 +81,16 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
- *ʜᴇʟʟᴏ ᴀᴋᴜ ɢʀᴇʏ ᴄɪʟɪᴋ*
-ɢʀᴇʏ ᴄɪʟɪᴋ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
-ᴛᴇᴋᴀɴ /help . ᴍᴀɪɴᴛᴀɴᴇᴅ ʙʏ [Grey](t.me/IdNyaZonk).
+ *ʜᴇʟʟᴏ ᴀᴋᴜ ꜰʀᴅs ʀᴏʙᴏᴛ*
+
+ꜰʀᴅs ʀᴏʙᴏᴛ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
+ᴛᴇᴋᴀɴ /help . ᴍᴀɪɴᴛᴀɴᴇᴅ ʙʏ [Firdaus](t.me/IdNyaZonk).
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ Add Grey Cilik to your group ➕️", url="t.me/GreyCilik_bot?startgroup=true"
+            text="➕️ Add Frds Robot to your group ➕️", url="t.me/frdsmusic_bot?startgroup=true"
         ),
     ],
     [
@@ -112,7 +113,7 @@ Click on the button bellow to get description about specifics command."""
 CILIK_IMG = "https://telegra.ph/file/28bd201ff855325df4c62.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @greyyvbss \
+ You can support the project by contacting @IdNyaZonk \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -228,7 +229,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi I'm Grey Cilik!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hi I'm Frds Robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -359,7 +360,7 @@ def cilik_about_callback(update, context):
     query = update.callback_query
     if query.data == "cilik_":
         query.message.edit_text(
-            text="๏ I'm *Cilik*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Frds*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -377,7 +378,7 @@ def cilik_about_callback(update, context):
                     InlineKeyboardButton(text="Notes", callback_data="cilik_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="cilik_support"),
+                    InlineKeyboardButton(text="Support", callback_data="fddssupport"),
                     InlineKeyboardButton(text="Credits", callback_data="cilik_credit"),
                  ],
                  [
@@ -434,14 +435,14 @@ def cilik_about_callback(update, context):
         )
     elif query.data == "cilik_support":
         query.message.edit_text(
-            text="*๏ Cilik support chats*"
+            text="*๏ Frds support chats*"
             "\nJoin My Support Group/Channel for see or report a problem on GreyCilik.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/CilikSupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/CilikProject"),
+                    InlineKeyboardButton(text="Support", url="t.me/frdssupport"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/frdsproject"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="cilik_"),
@@ -454,13 +455,13 @@ def cilik_about_callback(update, context):
 
     elif query.data == "cilik_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credits for Cilik</b>\n"
+            text=f"<b>๏ Credits for Frds</b>\n"
             f"\nHere Developers Making The Cilik",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Grey", url="t.me/greyyvbss"),
+                    InlineKeyboardButton(text="Grey", url="t.me/IdNyaZonk"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="cilik_"),
@@ -787,7 +788,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                f"""**Grey Cilik Started!**
+                f"""**Frds Robot Started!**
 
 **Python:** `{memek()}`
 **Telegram Library:** `v{peler}`""",
