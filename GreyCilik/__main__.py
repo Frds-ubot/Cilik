@@ -109,7 +109,7 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-CILIK_IMG = "https://telegra.ph/file/a807460d64ac73c5dc83a.jpg"
+CILIK_IMG = "https://telegra.ph/file/28bd201ff855325df4c62.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @greyyvbss \
